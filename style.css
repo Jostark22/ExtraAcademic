@@ -4,11 +4,16 @@
             font-family: Arial, Helvetica, sans-serif;
 
         }
+        *{
+            overflow: auto;
+        }
         .code_entier{
             background-color: #ffffff
             ;
-            margin: 0 5% 40px 5%;
-            padding: 20px;
+            margin: 0 5% 5% 5%;
+            padding: 0,4px,20px,4px;
+              box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+
         }
 
         .recette{
@@ -27,7 +32,8 @@
             display: block;
             max-height: 400px ;
             object-fit: cover;/*pour eviter que l'image ne se deforme*/
-            min-height: 200px;/*au cas ou l'image ne s'affiche pas qu'il ait au moins un width minimum*/
+            min-height: 200px;/*au cas ou l'image tarde à s'affiche qu'il ait au moins un width minimum*/
+
 
             
         }
@@ -72,48 +78,66 @@
              background-color: #6c829d;
              opacity: 69%;
              text-align: center;
-            height: 80px;
+            height: 50px;
+            min-width: auto;
             
          }
-         @media screen and (max-width:370) {.img_tab>table{
-           width: 100%;
+         
+         .img_tag>table>th{
+             font-size: 10px;
+
          }
+
+         .img_tag>table>td{
+             font-size: 8px;
              
          }
-          
+
+         
          .ingredients{
-width:50%;
-display: inline-block;
-margin-bottom: 10px;
+
+                display: inline-block;
+                margin-bottom: 10px;
+                       
+            }
+
+         .preparation
+         {
+                /*float: right;*/
+                margin-bottom: 10px;
          }
-         .preparation{
-width: 50%;
-float: right;
-margin-bottom: 10px;
+
+         .colonne{
+             width:100%;
          }
-         h2{
+
+        .colonne h2{
              font-size: 15px;
              text-align: center;
              text-transform: uppercase;
              margin-bottom: 0px;
+             border-bottom: 5px solid #6c829d;
+             margin: 10%;
+             padding-bottom: 5px;
              
          }
-         .ligne{
+         /*.ligne{
              display: inline-block;
              border:#6c829d solid 2px;
              width: 50%;
              margin-left: 25%;
-         }
+         }*/
          .liste{
              padding: 1px;
          }
-         .liste>p{
+         .liste p{
              border: solid 1px lightgray;
+             padding: 4px 0;
              font-size: 14px;
              text-align: center;
-             width: 50%;
+            /*width: 50%;*/
              height: 25px;
-             margin-left: 25%;
+             /*margin-left: 25%;*/
              margin-top: 3px;
              margin-bottom: 0px;
              
@@ -125,14 +149,82 @@ margin-bottom: 10px;
              text-align: center;
              color:#ffff;
              width:25px;
-             font-size: 14px;
-             box-sizing: border-box;
              height: 25px;
+             font-size: 14px;
+             font-weight: bold;
+             padding-top: 4px;
+             box-sizing: border-box;
+             
              border-radius: 50%;
-             min-height: 10px;
+            /* */
+             margin: 0;
+         }
+          .liste1 td{
+              vertical-align: top;
+              
+          }
+          .liste1 tr{
+                height: 50px;
+          }
+
+         .liste1{
+             text-align: center;
+             
          }
           .preparation_etape{
+                font-size: 14px;
+                padding-left: 10px;
+              padding-bottom:10px ;
 
           }
 
-  
+          
+
+
+  /*Style pour ordi*/
+         @media only screen and (min-width:768px ) {
+              .code_entier{
+            background-color: #ffffff
+            ;
+            margin: 40px 5% 4px 5%;
+            padding: 4px ,20px;
+              box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+
+              
+
+        }
+        .liste1{
+            margin-left:25%
+        }
+        .img_tab>table{
+             height: 80px;
+            
+         }
+
+          .ingredients{
+
+                
+                margin-bottom: 10px;
+                       
+            }
+
+         .preparation
+         {
+                float: right;
+                
+         }
+
+         .colonne{
+             width:45%;
+         }
+
+        
+         }
+          
+         @media only screen and (min-width:900px) {
+             .code_entier{
+                 margin-left: auto;
+                 margin-right: auto;
+                 width:700px
+             }
+         }
